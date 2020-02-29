@@ -34,6 +34,9 @@ Apply computer vision on edge devices (Raspberry PI).
 
 #### Histogram of Oriented Gradients (HOG)
 
+
+<img src="/img/hog-vector-ari.png"/>
+
 ## Face Detection
 
 #### Haar Cascade
