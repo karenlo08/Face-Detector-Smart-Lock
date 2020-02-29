@@ -33,7 +33,7 @@ Apply computer vision on edge devices (Raspberry PI).
 ### Face Embedding
 
 #### Histogram of Oriented Gradients (HOG)
-It's feature descriptor and simplified representation that contains only the most important information about our image. 
+It's a feature descriptor and simplified representation that contains only the most important information about our image. 
 
 <img src="/img/hog-vector-ari.png"/>
 
