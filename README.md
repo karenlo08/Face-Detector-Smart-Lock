@@ -11,6 +11,7 @@
    * [Histogram of Oriented Gradients (HOG)](#twitter-analysis)
   + [Face Detection](#why)
    * [Haar Cascade](#web-scrapping-analysis)
+- [References](#references)
 
 ## Inspiration
 
