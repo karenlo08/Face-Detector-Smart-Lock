@@ -1,7 +1,5 @@
 # Face Detector Smart Lock
 
-<img src="/img/.png"/>
-
 ## Table of contents
 - [Inspiration](#inspiration)
 - [Objectives](#Objectives)
