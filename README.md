@@ -1,4 +1,4 @@
-# Face Detector Smart Lock
+# Face Detector Smart Lock with Raspberry PI and OpenCV
 
 ## Table of contents
 - [Inspiration](#inspiration)
@@ -20,22 +20,39 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Apply computer vision on edge devices (Raspberry PI).
 
 
-## Technologies
+## Libraries
 * OpenCV
-* Dlib
-* Noobs, Raspbian
-* Apache Mxnet, ImageNet
-* AWS SageMaker Neo, S3
+* Dlib, face-recognition 1.3.0
+* imutils 0.5.3
+* Noobs, Raspbian 
 
-## Machine Learning Model
 
-### Face Embedding
+## Face Detection
 
-#### Histogram of Oriented Gradients (HOG)
-It's a feature descriptor and simplified representation that contains only the most important information about our image. 
+### Haar Cascade Classifier
+
+
+### Histogram of Oriented Gradients (HOG) ??????????
+It's a feature descriptor and simplified representation that contains only the most important information about our image. It helps us identify a face easier 
 
 <img src="/img/hog-vector-ari.png"/>
 
-## Face Detection
+https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
+
+### Face Landmark
+
+
+
+## Face Recognition
+
+### Face Embedding
+Embedding means projecting an input into another more convenient representation space.
+
+Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
+
+* formula here
+
+For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
+
 
 #### Haar Cascade
