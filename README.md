@@ -61,7 +61,27 @@ Output:
   'nose_tip': [(239, 211), (243, 212), (246, 212), (250, 210), (254, 208)],
 ```
 
+```
+for face_landmarks in face_landmarks_list:
+    pil_image = PIL.Image.fromarray(img)
+    d = PIL.ImageDraw.Draw(pil_image, 'RGBA')
 
+    d.point(face_landmarks['left_eyebrow'], fill=(255, 0, 0, 200))
+    d.point(face_landmarks['right_eyebrow'], fill=(255, 0, 0, 200))
+
+    d.point(face_landmarks['left_eye'], fill=(255, 0, 0, 200))
+    d.point(face_landmarks['right_eye'], fill=(255, 0, 0, 200))
+
+    d.point(face_landmarks['bottom_lip'], fill=(255, 0, 0, 255))
+    d.point(face_landmarks['top_lip'], fill=(255, 0, 0, 255))
+
+    d.point(face_landmarks['nose_bridge'], fill=(255, 0, 0, 255))
+    d.point(face_landmarks['nose_tip'], fill=(255, 0, 0, 255))
+
+    display(pil_image)
+```
+
+<img src="/img/face_landmarks_ari.png"/>
 
 ## Face Recognition
 
