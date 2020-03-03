@@ -64,7 +64,7 @@ for face_landmarks in face_landmarks_list:
     display(pil_image)
 ```
 
-<img src="/img/face_landmarks_ari.png"/>
+<img src="/img/face_landmark_ari.png"/>
 
 ## Face Recognition
 
