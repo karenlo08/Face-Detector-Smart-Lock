@@ -40,7 +40,16 @@ https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognit
 
 ### Face Landmark
 
+"""
+import imageio
+import numpy as np
+from PIL import Image, ImageDraw
+from IPython.display import display
 
+img = imageio.imread('ari.jpg') 
+face_landmarks_list = face_recognition.face_landmarks(img)
+face_landmarks_list
+""""
 
 ## Face Recognition
 
@@ -52,6 +61,3 @@ Doing a naive Euclidean distance measure find a similiraty between faces, will g
 * formula here
 
 For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
-
-
-#### Haar Cascade
