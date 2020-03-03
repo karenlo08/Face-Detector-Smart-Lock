@@ -49,9 +49,19 @@ from IPython.display import display
 img = imageio.imread('ari.jpg') 
 face_landmarks_list = face_recognition.face_landmarks(img)
 face_landmarks_list
+
+Output:
+'left_eyebrow': [(216, 189), (218, 185), (222, 183), (227, 183), (232, 184)],
+  'right_eyebrow': [(246, 180),
+   (251, 176),
+   (258, 173),
+   (265, 172),
+   (273, 173)],
+  'nose_bridge': [(241, 189), (242, 195), (242, 201), (243, 207)],
+  'nose_tip': [(239, 211), (243, 212), (246, 212), (250, 210), (254, 208)],
 ```
 
-<img src="/img/landmarks_code.png"/>
+
 
 ## Face Recognition
 
