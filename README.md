@@ -22,8 +22,7 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 
 ## Libraries
 * OpenCV
-* Dlib, face-recognition 1.3.0
-* imutils 0.5.3
+* Dlib
 * Noobs, Raspbian 
 
 
