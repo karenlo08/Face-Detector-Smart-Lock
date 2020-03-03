@@ -50,34 +50,17 @@ img = imageio.imread('ari.jpg')
 face_landmarks_list = face_recognition.face_landmarks(img)
 face_landmarks_list
 
-Output:
-'left_eyebrow': [(216, 189), (218, 185), (222, 183), (227, 183), (232, 184)],
-  'right_eyebrow': [(246, 180),
-   (251, 176),
-   (258, 173),
-   (265, 172),
-   (273, 173)],
-  'nose_bridge': [(241, 189), (242, 195), (242, 201), (243, 207)],
-  'nose_tip': [(239, 211), (243, 212), (246, 212), (250, 210), (254, 208)],
-```
-
-```
 for face_landmarks in face_landmarks_list:
     pil_image = PIL.Image.fromarray(img)
     d = PIL.ImageDraw.Draw(pil_image, 'RGBA')
-
     d.point(face_landmarks['left_eyebrow'], fill=(255, 0, 0, 200))
     d.point(face_landmarks['right_eyebrow'], fill=(255, 0, 0, 200))
-
     d.point(face_landmarks['left_eye'], fill=(255, 0, 0, 200))
     d.point(face_landmarks['right_eye'], fill=(255, 0, 0, 200))
-
     d.point(face_landmarks['bottom_lip'], fill=(255, 0, 0, 255))
     d.point(face_landmarks['top_lip'], fill=(255, 0, 0, 255))
-
     d.point(face_landmarks['nose_bridge'], fill=(255, 0, 0, 255))
     d.point(face_landmarks['nose_tip'], fill=(255, 0, 0, 255))
-
     display(pil_image)
 ```
 
