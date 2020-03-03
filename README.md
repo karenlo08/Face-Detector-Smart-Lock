@@ -40,7 +40,7 @@ https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognit
 
 ### Face Landmark
 
-"""
+```
 import imageio
 import numpy as np
 from PIL import Image, ImageDraw
@@ -49,7 +49,9 @@ from IPython.display import display
 img = imageio.imread('ari.jpg') 
 face_landmarks_list = face_recognition.face_landmarks(img)
 face_landmarks_list
-""""
+```
+
+<img src="/img/landmarks_code.png"/>
 
 ## Face Recognition
 
