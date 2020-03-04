@@ -45,6 +45,9 @@ This is a excellent article where it explains very detailed how HOG works:
 https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
 
 ### 1.C Face Landmark
+After we got our features descriptors from the Histogram of Oriented Gradients, we map/landmark our detected faces. Now that we know were the eyes and mouth are, we’ll simply rotate, scale and shear the image so that the eyes and mouth are centered as best as possible without distortionate the face. This is important for our next step.
+
+<img src="/img/face_landmark_ari.png"/>
 
 
 ## 2. Face Recognition
