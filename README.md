@@ -14,7 +14,7 @@
 - [References](#references)
 
 ## Inspiration
-The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came with this idea of detecting Ariana's face to unlock the front door lock and apply machine learning to solve it!
+The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came with this idea of detecting Ariana's face to unlock the door lock and apply machine learning to solve it!
 
 ## Objectives
 * Create an interactive demo to see machine learning in action.
