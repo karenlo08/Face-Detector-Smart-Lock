@@ -22,7 +22,7 @@ The Raspberry PI will video stream and when the face recognition model detects A
 
 ## Objectives
 * Create an interactive demo to see machine learning in action.
-* Unlock Smart Lock with face detection.
+* Unlock *August Smart Lock* with face detection.
 * Apply computer vision on edge devices (Raspberry PI).
 
 ## Terminology
