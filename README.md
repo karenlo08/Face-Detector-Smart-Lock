@@ -6,7 +6,7 @@
 - [Technologies](#technologies)
 - [Machine Learning Model](#prediction-model)
   + [Face Embedding](#FaceEmbedding)
-   * [Histogram of Oriented Gradients (HOG)](#twitter-analysis)
+   * [Histogram of Oriented Gradients (HOG)](#hog)
   + [Face Detection](#why)
    * [Haar Cascade](#web-scrapping-analysis)
 - [References](#references)
@@ -23,7 +23,7 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Raspberry Pi — It's a small, affordable computer popular for educators and hardware enthusiasts 🤖
 * Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
 * NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
-* OpenCV - (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. In simple language it is library used for Image Processing.
+* OpenCV - (Open Source Computer Vision) Library to make real-time image/video processing functions like rotation, resizing and drawing frames much easier.
 * Dlib face_recognition - Well documented library with face recognition algorithms, it allows the user to easily implement face detection, face recognition and even real-time face tracking from the command line.
 
 ## 1. Face Detection
@@ -44,33 +44,10 @@ https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognit
 
 ### 1.C Face Landmark
 
-```
-import imageio
-import numpy as np
-from PIL import Image, ImageDraw
-from IPython.display import display
 
-img = imageio.imread('ari.jpg') 
-face_landmarks_list = face_recognition.face_landmarks(img)
-face_landmarks_list
+## 2. Face Recognition
 
-for face_landmarks in face_landmarks_list:
-    pil_image = PIL.Image.fromarray(img)
-    d = PIL.ImageDraw.Draw(pil_image, 'RGBA')
-    d.point(face_landmarks['left_eyebrow'], fill=(255, 0, 0, 200))
-    d.point(face_landmarks['right_eyebrow'], fill=(255, 0, 0, 200))
-    d.point(face_landmarks['left_eye'], fill=(255, 0, 0, 200))
-    d.point(face_landmarks['right_eye'], fill=(255, 0, 0, 200))
-    d.point(face_landmarks['bottom_lip'], fill=(255, 0, 0, 255))
-    d.point(face_landmarks['top_lip'], fill=(255, 0, 0, 255))
-    d.point(face_landmarks['nose_bridge'], fill=(255, 0, 0, 255))
-    d.point(face_landmarks['nose_tip'], fill=(255, 0, 0, 255))
-    display(pil_image)
-```
-
-## Face Recognition
-
-### Face Embedding
+### 2.A Face Embedding
 > Embedding means projecting an input into another more convenient representation space.
 
 Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
@@ -78,3 +55,40 @@ Doing a naive Euclidean distance measure find a similiraty between faces, will g
 * formula here
 
 For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
+
+### 2.C Compare faces
+
+## 3. Connecting to August Smart Lock API
+
+```
+from august.api import Api 
+from august.authenticator import Authenticator, AuthenticationState
+api = Api(timeout=20)
+authenticator = Authenticator(api, "phone", "YOUR_USERNAME", "YOUR_PASSWORD", access_token_cache_file="PATH_TO_ACCESS_TOKEN_CACHE_FILE")
+authentication = authenticator.authenticate()
+state = authentication.state
+```
+* If AuthenticationState is BAD_PASSWORD, that means your login_method, username and password do not match
+* If AuthenticationState is AUTHENTICATED, that means you're authenticated already. If you specify "access_token_cache_file", the authentication is cached in a file. Everytime you try to authenticate again, it'll read from that file and if you're authenticated already, Authenticator won't call August again as you have a valid access_token
+
+```
+authenticator.send_verification_code()
+```
+* If AuthenticationState is REQUIRES_VALIDATION, then you'll need to go through verification process
+* send_verification_code() will send a code to either your phone or email depending on login_method
+
+```
+# Wait for your code and pass it in to validate_verification_code()
+validation_result = authenticator.validate_verification_code(123456)
+```
+
+* If ValidationResult is INVALID_VERIFICATION_CODE, then you'll need to either enter correct one or resend by calling send_verification_code() again
+* If ValidationResult is VALIDATED, then you'll need to call authenticate() again to finish authentication process
+```
+authentication = authenticator.authenticate()
+```
+
+* Once you have authenticated and validated you can use the access token to make API calls!
+```
+locks = api.get_locks(authentication.access_token)
+```
