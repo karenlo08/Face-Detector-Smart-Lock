@@ -92,7 +92,7 @@ authentication = authenticator.authenticate()
 ```
 locks = api.get_locks(authentication.access_token)
 ```
-## 4. Unlock door when face is recognized!
+## 4. Unlock door when face is recognized
 Creating a thread for unlocking the door will prevent that our real time video processing will freeze while is connecting to the Smart Lock API.
 ```
 from concurrent.futures import ThreadPoolExecutor
@@ -115,3 +115,4 @@ if 'ariana' in names and not unlocked:
 .
 .
 ```
+## 5. Welcome home!
