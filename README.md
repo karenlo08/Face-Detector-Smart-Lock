@@ -20,7 +20,7 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Apply computer vision on edge devices (Raspberry PI).
 
 ## 1. Terminology
-* Raspberry Pi — It's a small, affordable computer popular for educators, hardware hobbyists and robot enthusiasts. 🤖
+* Raspberry Pi — It's a small, affordable computer popular for educators, hardware hobbyists and robot enthusiasts 🤖
 * Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
 * NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
 * OpenCV - (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. In simple language it is library used for Image Processing.
