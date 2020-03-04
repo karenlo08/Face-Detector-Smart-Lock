@@ -32,11 +32,11 @@ Face detection system uses embedded machine learning models (Haar Cascade Classi
 ### 1.A Haar Cascade Classifier
 From OpenCV documentation:
 > The word “Cascade” in the classifier name means that the resultant classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.
-
 <img src="/img/haar_cascade.png"/>
 
 ### 1.B Histogram of Oriented Gradients (HOG) 
 It's a feature descriptor and simplified representation that contains only the most important information about our image. It helps us identify the most prominent face features easier.
+
 <img src="/img/hog-vector-ari.png"/>
 
 This is a excellent article where it explains very detailed how HOG works:
