@@ -49,7 +49,7 @@ https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognit
 
 ## 2. Face Recognition
 
-### 2.A Face Embedding and comparing faces
+### 2.A Face Embedding and Comparing Faces
 > Embedding means projecting an input into another more convenient representation space.
 
 Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
