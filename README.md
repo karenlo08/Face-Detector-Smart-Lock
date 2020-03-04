@@ -27,7 +27,7 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Dlib face_recognition - Well documented library with face recognition algorithms, it allows the user to easily implement face detection, face recognition and even real-time face tracking from the command line.
 
 ## 1. Face Detection
-Face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
+A face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
 
 ### 1.A Haar Cascade Classifier
 From OpenCV documentation:
@@ -71,7 +71,7 @@ for face_landmarks in face_landmarks_list:
 ## Face Recognition
 
 ### Face Embedding
-Embedding means projecting an input into another more convenient representation space.
+> Embedding means projecting an input into another more convenient representation space.
 
 Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
 
