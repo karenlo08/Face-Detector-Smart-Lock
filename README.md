@@ -118,4 +118,4 @@ while True:
 .
 ```
 ## 5. Welcome home!
-<img src="/img/welcome_home.jpeg"/>
+<iframe src="https://giphy.com/embed/lMyL6xAElcAeqDlkIp" width="397" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/memecandy-lMyL6xAElcAeqDlkIp">via GIPHY</a></p>
