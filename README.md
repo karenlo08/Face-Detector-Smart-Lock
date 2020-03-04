@@ -49,7 +49,7 @@ https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognit
 
 ## 2. Face Recognition
 
-### 2.A Face Embedding
+### 2.A Face Embedding and comparing faces
 > Embedding means projecting an input into another more convenient representation space.
 
 Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
@@ -58,7 +58,7 @@ Doing a naive Euclidean distance measure find a similiraty between faces, will g
 
 For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
 
-### 2.C Compare faces
+
 
 ## 3. Connecting to August Smart Lock API
 
