@@ -26,7 +26,7 @@ The Raspberry PI will video stream and when the face recognition model detects A
 * Apply computer vision on edge devices (Raspberry PI).
 
 ## Terminology
-* Raspberry Pi — It's a small, affordable computer popular for educators and hardware enthusiasts 🤖
+* Raspberry Pi — It's a small, affordable computer popular for educators and robot enthusiasts 🤖
 * Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
 * NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
 * OpenCV - (Open Source Computer Vision) Library to make real-time image/video processing functions like rotation, resizing and drawing frames much easier.
