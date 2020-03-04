@@ -57,11 +57,9 @@ After we got our features descriptors from the Histogram of Oriented Gradients, 
 
 Doing a naive Euclidean distance measure find a similiraty between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
 
-<img src="/img/formula_embedding.png"/>
+<img src="/img/formula_embedding.jpg"/>
 
 For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
-
-
 
 ## 3. Connecting to August Smart Lock API
 
