@@ -12,10 +12,10 @@
 - [References](#references)
 
 ## Inspiration
-The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys but the issue was Ariana is not older enough to own a cellphone to be able to unlock the front door via wifi. After she came from school or a playdate; what usually happens is her friend's parents text us to let us know they are waiting at the front door and we unlock the front door for them.  I came to the idea of detecting Ariana's face to unlock the front door lock and this way I could apply machine learning to solve it!
+The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came with this idea of detecting Ariana's face to unlock the front door lock and apply machine learning to solve it!
 
 ## Objectives
-* Create an interactive and friendly demo to see machine learning in action.
+* Create an interactive demo to see machine learning in action.
 * Unlock Smart Lock with face detection.
 * Apply computer vision on edge devices (Raspberry PI).
 
@@ -26,26 +26,24 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Noobs, Raspbian 
 
 
-## Face Detection
+## 1. Face Detection
 Face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
 
-### Haar Cascade Classifier
-The word “Cascade” in the classifier name means that the resultant classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed.
-The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers. 
+### 1.A Haar Cascade Classifier
+***From OpenCV documentation:
+The word “Cascade” in the classifier name means that the resultant classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.***
 
 <img src="/img/haar_cascade.png"/>
 
-
-### Histogram of Oriented Gradients (HOG) 
-It's a feature descriptor and simplified representation that contains only the most important information about our image. It helps us identify a face easier 
-
+### 1.B Histogram of Oriented Gradients (HOG) 
+It's a feature descriptor and simplified representation that contains only the most important information about our image. It helps us identify the most prominent face features easier.
 <img src="/img/hog-vector-ari.png"/>
 
 This is a excellent article where it explains very detailed how HOG works:
 https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
 
-### Face Landmark
-
+### 1.C Face Landmark
+Our faces has t
 ```
 import imageio
 import numpy as np
