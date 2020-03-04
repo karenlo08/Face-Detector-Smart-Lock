@@ -3,7 +3,7 @@
 ## Table of contents
 - [Inspiration](#inspiration)
 - [Objectives](#Objectives)
-- [Technologies](#technologies)
+- [Terminology](#technologies)
 - [Machine Learning Model](#prediction-model)
   + [Face Embedding](#FaceEmbedding)
    * [Histogram of Oriented Gradients (HOG)](#hog)
@@ -19,7 +19,7 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Unlock Smart Lock with face detection.
 * Apply computer vision on edge devices (Raspberry PI).
 
-## 1. Terminology
+## Terminology
 * Raspberry Pi — It's a small, affordable computer popular for educators and hardware enthusiasts 🤖
 * Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
 * NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
