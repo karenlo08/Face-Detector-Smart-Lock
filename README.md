@@ -1,4 +1,4 @@
-# Face Detector Smart Lock with Raspberry PI and OpenCV
+# Face Detector Smart Lock
 
 ## Table of contents
 - [Inspiration](#inspiration)
@@ -91,4 +91,27 @@ authentication = authenticator.authenticate()
 * Once you have authenticated and validated you can use the access token to make API calls!
 ```
 locks = api.get_locks(authentication.access_token)
+```
+## 4. Unlock door when face is recognized!
+Creating a thread for unlocking the door will prevent that our real time video processing will freeze while is connecting to the Smart Lock API.
+```
+from concurrent.futures import ThreadPoolExecutor
+pool = ThreadPoolExecutor(1)
+
+unlocked = False
+smart_lock_instance = SmartLock()
+.
+.
+.
+#loop over frames/images from video
+while True:
+.
+.
+.
+if 'ariana' in names and not unlocked:
+  unlocked = True
+	pool.submit(smart_lock_instance.unlock())
+.
+.
+.
 ```
