@@ -6,12 +6,14 @@
 - [Inspiration](#inspiration)
 - [Objectives](#Objectives)
 - [Terminology](#technologies)
-- [Machine Learning Model](#prediction-model)
-  + [Face Embedding](#FaceEmbedding)
-   * [Histogram of Oriented Gradients (HOG)](#hog)
-  + [Face Detection](#why)
-   * [Haar Cascade](#web-scrapping-analysis)
-- [References](#references)
+- [Face Detection](#prediction-model)
+  + [Haar Cascade Classifier](#FaceEmbedding)
+  + [Histogram of Oriented Gradients (HOG)](#hog)
+  + [Face Landmark](#why)
+- [Face Recognition](#web-scrapping-analysis)
+  + [Face Embedding and Comparing Faces](#FaceEmbedding)
+- [Connecting to August Smart Lock API](#references)
+- [Unlock door when face is recognized](#references)
 
 ## Inspiration
 The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came with this idea of detecting Ariana's face to unlock the door lock and apply machine learning to solve it!
