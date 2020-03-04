@@ -19,12 +19,12 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 * Unlock Smart Lock with face detection.
 * Apply computer vision on edge devices (Raspberry PI).
 
-
-## Libraries
-* OpenCV
-* Dlib
-* Noobs, Raspbian 
-
+## 1. Terminology
+* Raspberry Pi — It's a small, affordable computer popular for educators, hardware hobbyists and robot enthusiasts. 🤖
+* Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
+* NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
+* OpenCV - (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. In simple language it is library used for Image Processing.
+* Dlib face_recognition - Well documented library with face recognition algorithms, it allows the user to easily implement face detection, face recognition and even real-time face tracking from the command line.
 
 ## 1. Face Detection
 Face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
@@ -43,7 +43,7 @@ This is a excellent article where it explains very detailed how HOG works:
 https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
 
 ### 1.C Face Landmark
-Our faces has t
+
 ```
 import imageio
 import numpy as np
