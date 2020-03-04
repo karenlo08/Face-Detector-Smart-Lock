@@ -103,13 +103,13 @@ smart_lock_instance = SmartLock()
 .
 .
 .
-#loop over frames/images from video
+#loop over frames from video and apply face recognition model
 while True:
 .
 .
 .
-if 'ariana' in names and not unlocked:
-  unlocked = True
+    if 'ariana' in names and not unlocked:
+        unlocked = True
 	pool.submit(smart_lock_instance.unlock())
 .
 .
