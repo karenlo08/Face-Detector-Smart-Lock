@@ -27,15 +27,21 @@ The inspiration from this project comes from my daughter Ariana. We changed our 
 
 
 ## Face Detection
+Face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
 
 ### Haar Cascade Classifier
+The word “Cascade” in the classifier name means that the resultant classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed.
+The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers. 
+
+<img src="/img/haar_cascade.png"/>
 
 
-### Histogram of Oriented Gradients (HOG) ??????????
+### Histogram of Oriented Gradients (HOG) 
 It's a feature descriptor and simplified representation that contains only the most important information about our image. It helps us identify a face easier 
 
 <img src="/img/hog-vector-ari.png"/>
 
+This is a excellent article where it explains very detailed how HOG works:
 https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
 
 ### Face Landmark
