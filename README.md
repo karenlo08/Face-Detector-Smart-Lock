@@ -16,7 +16,7 @@
 - [Unlock door when face is recognized](#references)
 
 ## Inspiration
-The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came with this idea of detecting Ariana's face to unlock the door lock and apply machine learning to solve it!
+The inspiration from this project comes from my daughter Ariana. We changed our locks for smart ones because we constantly forget or lost our keys; but Ariana is not older enough to own a cellphone and be able to unlock the front door via wifi. I came up with this idea of detecting Ariana's face to unlock the door lock and apply machine learning to solve it!
 
 The Raspberry PI will video stream and when the face recognition model detects Ariana's face will send a request to August SmartLock API to unlock it.
 
@@ -28,7 +28,7 @@ The Raspberry PI will video stream and when the face recognition model detects A
 ## Terminology
 * Raspberry Pi — It's a small, affordable computer popular with educators and robot enthusiasts 🤖
 * Raspbian — the Raspberry Pi Foundation’s official operating system. Raspbian is derived from Debian Linux.
-* NOOBS - (New Out Of the Box Software) is a GUI operation system installation manager. It comes with Raspbian.
+* NOOBS - (New Out Of the Box Software) is a GUI operating system installation manager. It comes with Raspbian.
 * OpenCV - (Open Source Computer Vision) Library to make real-time image/video processing functions like rotation, resizing and drawing frames much easier.
 * Dlib face_recognition - Well documented library with face recognition algorithms, it allows the user to easily implement face detection, face recognition and even real-time face tracking from the command line.
 
@@ -37,7 +37,7 @@ A face detection system uses embedded machine learning models (Haar Cascade Clas
 
 ### 1.A Haar Cascade Classifier
 From OpenCV documentation:
-> The word “Cascade” in the classifier name means that the resultant classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.
+>> The word “Cascade” in the classifier name means that the resulting classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.
 <img src="/img/haar_cascade.png"/>
 
 ### 1.B Histogram of Oriented Gradients (HOG) 
@@ -49,7 +49,7 @@ This is a excellent article where it explains very detailed how HOG works:
 https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78
 
 ### 1.C Face Landmark
-After we got our features descriptors from the Histogram of Oriented Gradients, we map/landmark our detected faces. Now that we know were the eyes and mouth are, we’ll simply rotate, scale and shear the image so that the eyes and mouth are centered as best as possible without distortionate the face. This is important for our next step.
+After we got our features descriptors from the Histogram of Oriented Gradients, we map/landmark our detected faces. Now that we know where the eyes and mouth are, we’ll simply rotate, scale and shear the image so that the eyes and mouth are centered as best as possible without distorted the face. This is important for our next step.
 
 <img src="/img/face_landmark_ari.png"/>
 
@@ -58,12 +58,11 @@ After we got our features descriptors from the Histogram of Oriented Gradients, 
 
 ### 2.A Face Embedding and Comparing Faces
 > Embedding means projecting an input into another more convenient representation space.
-
-Doing a naive Euclidean distance measure to find similarity between faces, will generate a lot of issues because pixels intensity may vary or random noise data can be present.
+Doing a naive Euclidean distance measure to find similarity between faces, will generate a lot of issues because pixel intensity may vary or random noise data can be present.
 
 <img src="/img/formula_embedding.jpg"/>
 
-For these reasons, we can reformulate this by embedding or projecting the faces in a new equaly space. The result will be a numerical vector representing 128 measurements for each face.
+For these reasons, we can reformulate this by embedding or projecting the faces in a new equally space. The result will be a numerical vector representing 128 measurements for each face.
 
 ## 3. Connecting to August Smart Lock API
 
@@ -100,7 +99,7 @@ authentication = authenticator.authenticate()
 locks = api.get_locks(authentication.access_token)
 ```
 ## 4. Unlock door when face is recognized
-Creating a thread for unlocking the door will prevent that our real time video processing will freeze while is connecting to the Smart Lock API.
+Creating a thread for unlocking the door will prevent our real time video processing from freezing while connecting to the Smart Lock API.
 ```
 from concurrent.futures import ThreadPoolExecutor
 pool = ThreadPoolExecutor(1)
