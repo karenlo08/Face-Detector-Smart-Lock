@@ -32,6 +32,8 @@ The Raspberry PI will video stream and when the face recognition model detects A
 * OpenCV - (Open Source Computer Vision) Library to make real-time image/video processing functions like rotation, resizing and drawing frames much easier.
 * Dlib face_recognition - Well documented library with face recognition algorithms, it allows the user to easily implement face detection, face recognition and even real-time face tracking from the command line.
 
+<img src="/img/diagram.png"/>
+
 ## 1. Face Detection
 A face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
 
