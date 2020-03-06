@@ -1,4 +1,4 @@
-# Face Detector Smart Lock
+# Smart Lock System with Face Recognition
 
 [![Face Recognition Smart Lock](https://res.cloudinary.com/marcomontalbano/image/upload/v1583286944/video_to_markdown/images/youtube--9IFHdqVzUTU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/9IFHdqVzUTU "Face Recognition Smart Lock")
 
