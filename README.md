@@ -125,4 +125,4 @@ while True:
 .
 ```
 ## 5. Welcome home!
-<img src="/img/welcome_home.png"/>
+<img src="/img/welcome_home.jpeg"/>
