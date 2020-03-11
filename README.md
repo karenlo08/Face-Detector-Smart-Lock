@@ -1,6 +1,5 @@
 # Smart Lock System with Face Recognition
-
-[![Face Recognition Smart Lock](https://res.cloudinary.com/marcomontalbano/image/upload/v1583286944/video_to_markdown/images/youtube--9IFHdqVzUTU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/9IFHdqVzUTU "Face Recognition Smart Lock")
+<img src="/img/karen.png"/>
 
 ## Table of contents
 - [Inspiration](#inspiration)
@@ -36,10 +35,12 @@ The Raspberry PI will video stream and when the face recognition model detects A
 
 ## 1. Face Detection
 A face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
+[![Face Recognition Smart Lock]
+(https://res.cloudinary.com/marcomontalbano/image/upload/v1583286944/video_to_markdown/images/youtube--9IFHdqVzUTU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/9IFHdqVzUTU "Face Recognition Smart Lock")
 
 ### 1.A Haar Cascade Classifier
 From OpenCV documentation:
->> The word “Cascade” in the classifier name means that the resulting classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.
+> The word “Cascade” in the classifier name means that the resulting classifier consists of several simpler classifiers (stages) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input/filters to the basic classifiers.
 <img src="/img/haar_cascade.png"/>
 
 ### 1.B Histogram of Oriented Gradients (HOG) 
