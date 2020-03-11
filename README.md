@@ -1,5 +1,5 @@
 # Smart Lock System with Face Recognition
-<img src="/img/karen.png"/>
+<img src="/img/Face Detector Smart Lock System.jpg"/>
 
 ## Table of contents
 - [Inspiration](#inspiration)
