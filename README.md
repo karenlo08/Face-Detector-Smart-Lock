@@ -35,8 +35,8 @@ The Raspberry PI will video stream and when the face recognition model detects A
 
 ## 1. Face Detection
 A face detection system uses embedded machine learning models (Haar Cascade Classifier) and algorithms (HOG, Face Landmarks) to determine the presence and location of faces in a still image or video frame. It detects where in the image those  are situated and it places a bounding box around them.
-[![Face Recognition Smart Lock]
-(https://res.cloudinary.com/marcomontalbano/image/upload/v1583286944/video_to_markdown/images/youtube--9IFHdqVzUTU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/9IFHdqVzUTU "Face Recognition Smart Lock")
+
+[![Face Recognition Smart Lock](https://res.cloudinary.com/marcomontalbano/image/upload/v1583286944/video_to_markdown/images/youtube--9IFHdqVzUTU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/9IFHdqVzUTU "Face Recognition Smart Lock")
 
 ### 1.A Haar Cascade Classifier
 From OpenCV documentation:
