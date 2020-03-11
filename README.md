@@ -124,5 +124,5 @@ while True:
 .
 .
 ```
-## 5. Welcome home!
+## 5.Mission Accomplished
 <img src="/img/welcome_home.jpeg"/>
