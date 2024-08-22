@@ -125,4 +125,4 @@ while True:
 ```
 ## 5. Welcome Home!
 
-### Thanks for reading 🌻
+###  Thanks for reading 🌻
